@@ -1,5 +1,4 @@
 {
-  # inputs.unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.nixpkgs.url = "github:nixos/nixpkgs";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
@@ -11,6 +10,7 @@
         jdkToUse = pkgs.jdk17;
 
         scalaJvmDeps = with pkgs; [
+          jdkToUse
           (sbt.override { jre = jdkToUse; })
           (mill.override { jre = jdkToUse; })
           (scala-cli.override { jre = jdkToUse; })
