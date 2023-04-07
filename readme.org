@@ -1,12 +1,13 @@
 #+title: Read me
 
-* nix flake templates for my personal dev environments
-** Scala
-*** Credits
+nix flake templates for my personal dev environments
+
+* Scala
+** Credits
 - https://github.com/PurpleKingdomGames/indigo
 - https://github.com/http4s/http4s
 - https://github.com/typelevel/typelevel-nix
-** Haskell
-*** Credits
+* Haskell
+** Credits
 - https://github.com/afreakk/Xmoflake
 - https://nixos.wiki/wiki/Haskell
