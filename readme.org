@@ -1,0 +1,7 @@
+#+title: Read me
+
+* Scala Nix Flake Template
+** Credit
+- https://github.com/PurpleKingdomGames/indigo
+- https://github.com/http4s/http4s
+- https://github.com/typelevel/typelevel-nix
