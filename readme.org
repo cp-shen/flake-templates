@@ -2,11 +2,11 @@
 
 * nix flake templates for my personal dev environments
 ** Scala
-*** Credit
+*** Credits
 - https://github.com/PurpleKingdomGames/indigo
 - https://github.com/http4s/http4s
 - https://github.com/typelevel/typelevel-nix
 ** Haskell
-*** Credit
-https://github.com/afreakk/Xmoflake
-https://nixos.wiki/wiki/Haskell
+*** Credits
+- https://github.com/afreakk/Xmoflake
+- https://nixos.wiki/wiki/Haskell
