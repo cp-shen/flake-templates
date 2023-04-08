@@ -15,6 +15,7 @@
           (mill.override { jre = jdkToUse; })
           (scala-cli.override { jre = jdkToUse; })
           (coursier.override { jre = jdkToUse; })
+          (metals.override { jre = jdkToUse; })
         ];
         scalaJsDeps = with pkgs; [
           nodejs
@@ -28,7 +29,6 @@
         ];
         shellHook = ''
           export JAVA_HOME="${jdkToUse.home}";
-          export JAVA_OPTS="-Xmx2048m";
         '';
       in rec {
         devShells.scalaWithNativeAndJs = pkgs.mkShell {
