@@ -1,2 +1,5 @@
-/.direnv/
-/result
+.stack-work/
+.direnv/
+result
+dist*
+*~
