@@ -26,8 +26,9 @@
         packages.default = project [ ] false;
         devShell = project [
           (hl.addBuildTools (with haskellPackages; [
-            haskell-language-server
+            stack
             cabal-install
+            haskell-language-server
             implicit-hie
             hlint
             hpack
