@@ -32,15 +32,14 @@
             '';
           };
           myDevTools = with hpkgs; [
-            ghc
             stack-wrapped
             cabal-install
             haskell-language-server
             implicit-hie
-            hlint
             hpack
-            hoogle
           ];
+
+          # upstream native deps will be pulled in by nix 
           myNativeDeps = with pkgs; [
             # zlib
           ];
@@ -55,9 +54,9 @@
               ] ++ extraModifiers);
             };
         in
-        rec {
+        {
           packages.default = myProject false [ ];
-          devShells.cabal2nix = myProject true [
+          devShells.default = myProject true [
             (hlib.addBuildTools myDevTools)
             (hlib.overrideCabal (old: {
               shellHook = (old.shellHook or "") + ''
@@ -73,11 +72,6 @@
               '';
             }))
           ];
-          # devShells.stack = pkgs.mkShell {
-          #   buildInputs = myDevTools ++ myNativeDeps;
-          #   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath myNativeDeps;
-          # };
-          devShells.default = devShells.cabal2nix;
         }) // {
       overlays.default = final: prev: {
         # package_name = self.packages.${final.system}.default;
